@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>545u - Random ruoka valitsin</title>
+		<style>
+			body {
+				color: #ffffff;
+				background-color:#0077ff;
+			}
+			.valitse_button {
+				background: #ccc url(img/rrv/hamburger.jpg);
+				padding: 0.5em 1em;
+				height: 70px;
+				width: 200px;
+				color: #31dd02;
+				font-size: 30px;
+				text-shadow: 0 6px 6px #000;
+			}
+			#food{
+				background: none;
+				font-family: Androgyne;
+				background-image: url(''), url('/img/rrv/food1.png'), url('');
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index:1;
+				animation: food 1000s linear infinite;
+			}
+			@keyframes food {
+				0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+				100% {background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;}          
+			}
+        }
+		</style>
+	</head>
+	<body>
+		<center>
+			<div id="food">
+				<h1>Random Ruoka Valitsin!</h1>
+				<p>Tervetuloa Random Ruoka Valitsimeen! Random Ruoka Valitsin on simppeli web-sovellus, joka auttaa ihmisiä päättämään mitä ruokaa syödä.</p>
+				<p>Paina 'Valitse' -nappia valitaksesi sattuman varaisen ruuan.</p>
+				<button class="valitse_button" type="button" onclick="getfood()">Valitse!</button>
+				<h3>Tämän päivän ruokasi on: </h3>
+				<script type="text/javascript">
+					var foodarray = [
+						"Makaroonilaatikko", 
+						"Hernekeitto", 
+						"Jauhenlihakeitto", 
+						"Pinaattikeitto", 
+						"Munakas", 
+						"Jauhenlihaperunakastike", 
+						"Kinkkukiusaus", 
+						"Jauhenlihakastike", 
+						"Nauravat Nakit", 
+						"Kanajauhenlihakastike", 
+						"Makkarakeitto", 
+						"Uunilenkki", 
+						"Lihapullakastike", 
+						"Pyttipannu", 
+						"Smetanakana", 
+						"Kanakeitto", 
+						"Lasange", 
+						"Lohikiusaus", 
+						"Kalapuikot", 
+						"Pennopastajauhenliha-vuoka", 
+						"Tonnikalaspagettipaistos", 
+						"Lohipyörykät", 
+						"Täytetyt letut"
+					];
+					function getfood() { 
+						document.getElementById('foodname').innerHTML = foodarray[Math.floor(Math.random() * foodarray.length)]; 
+					} 
+				</script>
+				<h2 id="foodname"></h2>
+			</div>
+		</center>
+	</body>
+</html>
