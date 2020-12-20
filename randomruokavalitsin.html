@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html lang="fi">
 	<head>
 		<title>545u - Random ruoka valitsin</title>
 		<link rel="icon" type="image/png" href="img/rrv/icon.png"/>
 		<style>
 			body {
+				text-align: center;
 				color: #ffffff;
 				background-color:#0077ff;
 			}
@@ -32,51 +33,48 @@
 				0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
 				100% {background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;}          
 			}
-        }
 		</style>
 	</head>
 	<body>
-		<center>
-			<div id="food">
-				<h1>Random Ruoka Valitsin!</h1>
-				<p>Tervetuloa Random Ruoka Valitsimeen! Random Ruoka Valitsin on simppeli web-sovellus, joka auttaa ihmisi&auml; p&auml;&auml;tt&auml;m&auml;&auml;n mit&auml; ruokaa sy&ouml;d&auml;.</p>
-				<p>Paina 'Valitse' -nappia valitaksesi sattuman varaisen ruuan.</p>
-				<button class="valitse_button" type="button" onclick="getfood()">Valitse!</button>
-				<h3>Tämän päivän ruokasi on: </h3>
-				<script type="text/javascript">
-					var foodarray = [
-						"Makaroonilaatikko", 
-						"Hernekeitto", 
-						"Jauhenlihakeitto", 
-						"Pinaattikeitto", 
-						"Munakas", 
-						"Jauhenlihaperunakastike", 
-						"Kinkkukiusaus", 
-						"Jauhenlihakastike", 
-						"Nauravat Nakit", 
-						"Kanajauhenlihakastike", 
-						"Makkarakeitto", 
-						"Uunilenkki", 
-						"Lihapullakastike", 
-						"Pyttipannu", 
-						"Smetanakana", 
-						"Kanakeitto", 
-						"Lasange", 
-						"Lohikiusaus", 
-						"Kalapuikot", 
-						"Pennopastajauhenliha-vuoka", 
-						"Tonnikalaspagettipaistos", 
-						"Lohipyörykät", 
-						"Täytetyt letut",
-						"Keksi/Etsi uusi resepti",
-						"Vety"
-					];
-					function getfood() { 
-						document.getElementById('foodname').innerHTML = foodarray[Math.floor(Math.random() * foodarray.length)]; 
-					} 
-				</script>
-				<h2 id="foodname"></h2>
-			</div>
-		</center>
+		<div id="food">
+			<h1>Random Ruoka Valitsin!</h1>
+			<p>Tervetuloa Random Ruoka Valitsimeen! Random Ruoka Valitsin on simppeli web-sovellus, joka auttaa ihmisi&auml; p&auml;&auml;tt&auml;m&auml;&auml;n mit&auml; ruokaa sy&ouml;d&auml;.</p>
+			<p>Paina 'Valitse' -nappia valitaksesi sattuman varaisen ruuan.</p>
+			<button class="valitse_button" type="button" onclick="getfood()">Valitse!</button>
+			<h3>Tämän päivän ruokasi on: </h3>
+			<script>
+				var foodarray = [
+					"Makaroonilaatikko", 
+					"Hernekeitto", 
+					"Jauhenlihakeitto", 
+					"Pinaattikeitto", 
+					"Munakas", 
+					"Jauhenlihaperunakastike", 
+					"Kinkkukiusaus", 
+					"Jauhenlihakastike", 
+					"Nauravat Nakit", 
+					"Kanajauhenlihakastike", 
+					"Makkarakeitto", 
+					"Uunilenkki", 
+					"Lihapullakastike", 
+					"Pyttipannu", 
+					"Smetanakana", 
+					"Kanakeitto", 
+					"Lasange", 
+					"Lohikiusaus", 
+					"Kalapuikot", 
+					"Pennopastajauhenliha-vuoka", 
+					"Tonnikalaspagettipaistos", 
+					"Lohipyörykät", 
+					"Täytetyt letut",
+					"Keksi/Etsi uusi resepti",
+					"Vety"
+				];
+				function getfood() { 
+					document.getElementById('foodname').innerHTML = foodarray[Math.floor(Math.random() * foodarray.length)]; 
+				} 
+			</script>
+			<h2 id="foodname"></h2>
+		</div>
 	</body>
 </html>
